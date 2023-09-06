@@ -6,12 +6,12 @@ public class main {
         USMoney a, b, r;
 
         a = new USMoney(7, 70);
-        b = new USMoney(10, 20);
+        b = new USMoney(10, 202);
         r = a.plus(b);
         System.out.println(r.getAll());
 
-        a = new USMoney(0, 0);
-        b = new USMoney(3, 37);
+        a = new USMoney(3, 0);
+        b = new USMoney(0, 102);
         r = a.plus(b);
         System.out.println(r.getAll());
 

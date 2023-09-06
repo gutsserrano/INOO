@@ -6,7 +6,7 @@ public class USMoney {
     private int cents;
 
     public USMoney(int dollar, int cent){
-        if(dollar > 0 && cent > 0){
+        if(dollar >= 0 && cent >= 0){
             int temp = 0;
             while(cent > 99){
                 temp = cent / 100;
@@ -24,6 +24,11 @@ public class USMoney {
     }
 
     public String getAll(){
-        return "$ "+this.dollars+"."+this.cents;
+        if(this.cents <= 9){
+            return "$ "+this.dollars+".0"+this.cents;
+        }else{
+            return "$ "+this.dollars+"."+this.cents;
+        }
+        
     }
 }
